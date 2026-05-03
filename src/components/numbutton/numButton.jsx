@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
-import './numButton.css'
+import './numbutton.css'
 
-const NumButton = () => {
-  const [buttonNum, setButtonNum] = useState(0)
+const NumButton = (props) => {
+  const [buttonNum, setButtonNum] = useState(props.setButtonNum)
 
   return (
     <div className='numButtonDiv'>
