@@ -34,3 +34,21 @@ body{
   color: var(--ash-grey);
   font-size: 3em;
 }
+
+#equalOperator{
+  background: var(--dark-slate-grey);
+  color: var(--ash-grey);
+}
+
+#part2{
+  display: grid;
+  grid-template-columns: repeat(3, 130px);
+  gap: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#part2-button{
+  background-color: var(--dark-slate-grey);
+}

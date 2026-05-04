@@ -1,0 +1,23 @@
+.numButton2{
+  height: 70px;
+  width: 120px;
+  padding: 10px;
+  background: var(--dark-slate-grey);
+  border: none;
+  border-radius: 10px;
+  font-size: 2.5em;
+  font-family: Public Sans, sans-serif;
+}
+
+.numButton2:hover{
+  background: var(--charcoal-blue);
+  cursor: pointer;
+  scale: 1.05;
+  transition: all 0.1s ease-in-out;
+}
+
+.numButton2:active{
+  background: var(--dark-slate-grey);
+  scale: 0.95;
+  transition: all 0.1s ease-in-out;
+}
