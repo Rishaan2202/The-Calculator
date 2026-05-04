@@ -1,0 +1,10 @@
+#calcbox{
+    width: 820px;
+    height: 150px;
+    border: solid 5px var(--charcoal-blue);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 20px;
+    overflow-x: hidden;
+}

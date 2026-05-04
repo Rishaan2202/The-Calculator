@@ -3,20 +3,9 @@
   margin: 0;
 }
 
-.numButton{
-  height: 80px;
-  width: 300px;
-  padding: 10px;
-  background: var(--muted-teal);
-  border: none;
-  border-radius: 10px;
-  font-size: 2.5em;
-  font-family: Public Sans, sans-serif;
-}
-
 #numButtons{
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(4, 200px);
   gap: 10px;
   font-family: Public Sans, sans-serif;
   color: var(--muted-teal);
@@ -33,12 +22,15 @@
   bottom: 10px;
 }
 
-#zeroButton{
-  position: absolute;
-  left: 10px;
-}
-
 body{
   background: var(--deep-teal);
   font-family: Public Sans, sans-serif;
+}
+
+#calcNumDiv{
+  position: absolute;
+  top: 50px;
+  right: 455px;
+  color: var(--ash-grey);
+  font-size: 3em;
 }
