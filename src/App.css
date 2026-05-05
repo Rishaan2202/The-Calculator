@@ -46,9 +46,49 @@ body{
   gap: 10px;
   position: absolute;
   right: 10px;
-  top: 10px;
+  bottom: 10px;
 }
 
 #part2-button{
   background-color: var(--dark-slate-grey);
+}
+
+#sideFeatureDiv{
+  background: var(--dark-slate-grey);
+  font-family: Public Sans, sans-serif;
+  width: 400px;
+  height: 220px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 20px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.feature{
+  position: relative;
+  left: 5px;
+  top: 5px;
+  background: var(--muted-teal);
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2em;
+}
+
+.feature:hover{
+  background: var(--ash-grey);
+  color: var(--dark-slate-grey);
+  cursor: pointer;
+  scale: 1.05;
+  transition: all 0.1s ease-in-out;
+}
+
+.feature:active{
+  background: var(--muted-teal);
+  scale: 0.95;
+  transition: smooth;
 }

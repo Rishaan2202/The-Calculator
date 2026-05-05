@@ -4,6 +4,7 @@ import NumButton from './components/numbutton/numButton.jsx'
 import Calcbox from './components/calcbox/calcbox.jsx'
 import { evaluate } from 'mathjs';
 import NumButton2 from './components/numbutton/numButton2.jsx';
+import SideFeature from './components/advancedFeatures/sideFeatures.jsx';
 
 function App() {
 
@@ -68,15 +69,21 @@ function App() {
       </div>
 
       <div id="part2">
-        <NumButton2 className="part2-button" setButtonNum2={"sin"} onclick={() => {setA(a + "sin(")}} />
-        <NumButton2 className="part2-button" setButtonNum2={"cos"} onclick={() => {setA(a + "cos(")}} />
-        <NumButton2 className="part2-button" setButtonNum2={"tan"} onclick={() => {setA(a + "tan(")}} />
-        <NumButton2 className="part2-button" setButtonNum2={"log"} onclick={() => {setA(a + "log(")}} />
+        <NumButton2 className="part2-button" setButtonNum2={"sin"} onclick={() => {setA(Math.sin(evaluate(a)*(Math.PI/180)))}} />
+        <NumButton2 className="part2-button" setButtonNum2={"cos"} onclick={() => {setA(Math.cos(evaluate(a)*(Math.PI/180)))}} />
+        <NumButton2 className="part2-button" setButtonNum2={"tan"} onclick={() => {setA(Math.tan(evaluate(a)*(Math.PI/180)))}} />
+        <NumButton2 className="part2-button" setButtonNum2={"log"} onclick={() => {setA(Math.log10(evaluate(a)))}} />
         <NumButton2 className="part2-button" setButtonNum2={"("} onclick={() => {setA(a + "(")}} />
         <NumButton2 className="part2-button" setButtonNum2={")"} onclick={() => {setA(a + ")")}} />
-        <NumButton2 className="part2-button" setButtonNum2={"ln"} onclick={() => {setA(a + "ln(")}} />
-        <NumButton2 className="part2-button" setButtonNum2={"√"} onclick={() => {setA(a + "√(")}} />
+        <NumButton2 className="part2-button" setButtonNum2={"ln"} onclick={() => {setA(Math.log(evaluate(a)))}} />
+        <NumButton2 className="part2-button" setButtonNum2={"√"} onclick={() => {setA(Math.sqrt(evaluate(a)))}} />
+        <NumButton2 className="part2-button" setButtonNum2={"e"} onclick={() => {setA(a + Math.E)}} />
+        <NumButton2 className="part2-button" setButtonNum2={"Pi"} onclick={() => {setA(a + Math.PI)}} />
+        <NumButton2 className="part2-button" setButtonNum2={"X^y"} onclick={() => {setA(a + "**")}} />
+        <NumButton2 className="part2-button" setButtonNum2={"|X|"} onclick={() => {setA(Math.abs(evaluate(a)))}} />
       </div>
+
+      <SideFeature id="sideFeatureDiv" />
     </div>
   )
 }
