@@ -78,7 +78,7 @@ function App() {
         <NumButton2 className="part2-button" setButtonNum2={"ln"} onclick={() => {setA(Math.log(evaluate(a)))}} />
         <NumButton2 className="part2-button" setButtonNum2={"√"} onclick={() => {setA(Math.sqrt(evaluate(a)))}} />
         <NumButton2 className="part2-button" setButtonNum2={"e"} onclick={() => {setA(a + Math.E)}} />
-        <NumButton2 className="part2-button" setButtonNum2={"Pi"} onclick={() => {setA(a + Math.PI)}} />
+        <NumButton2 className="part2-button" setButtonNum2={"π"} onclick={() => {setA(a + Math.PI)}} />
         <NumButton2 className="part2-button" setButtonNum2={"X^y"} onclick={() => {setA(a + "**")}} />
         <NumButton2 className="part2-button" setButtonNum2={"|X|"} onclick={() => {setA(Math.abs(evaluate(a)))}} />
       </div>

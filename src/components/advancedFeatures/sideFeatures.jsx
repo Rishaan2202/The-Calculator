@@ -19,7 +19,9 @@ const SideFeature = () => {
             <button id="currencyConverter5" className='feature' onClick={showCurrencyConverter}>Currency Converter</button>
             <button id="currencyConverter6" className='feature' onClick={showCurrencyConverter}>Currency Converter</button>
             <button id="currencyConverter7" className='feature' onClick={showCurrencyConverter}>Currency Converter</button>
+            <CurrencyConverter />
         </div>
+
     )
 }
 
