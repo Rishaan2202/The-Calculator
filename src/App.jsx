@@ -5,6 +5,7 @@ import Calcbox from './components/calcbox/calcbox.jsx'
 import { evaluate } from 'mathjs';
 import NumButton2 from './components/numbutton/numButton2.jsx';
 import SideFeature from './components/advancedFeatures/sideFeatures.jsx';
+import Countries from './components/advancedFeatures/countries.jsx';
 
 function App() {
 
