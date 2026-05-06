@@ -7,6 +7,8 @@ const Countries = () => {
   const [inputCurrency, setInputCurrency] = useState('USD')
   const [outputCurrency, setOutputCurrency] = useState('INR');
   const [currencyData, setCurrencyData] = useState(null);
+  const [secondValue, setSecondValue] = useState("")
+  const [multiplier, setMultiplier] = useState(1);
 
   const currencyResponse = () => {
     return fetch(`https://v6.exchangerate-api.com/v6/${import.meta.env.VITE_CURRENCY_API}/latest/${inputCurrency}`);
@@ -200,7 +202,8 @@ const handleCurrencyChange = (event) => {
 const handleCurrencyChange2 = (event) => {
   setOutputCurrency(event.target.value);
 
-  const secondValue = currencyData.conversion_rates[event.target.value];
+  setSecondValue((currencyData.conversion_rates[event.target.value])*multiplier);
+  
   if (secondValue) {
     console.log(secondValue);
     setSelectedFlag(secondValue.flag);
@@ -208,26 +211,33 @@ const handleCurrencyChange2 = (event) => {
 }
 
 return (
-  <div>
-    <select name="countryPicker" id="countryPicker" value={selectedCurrency} onChange={handleCurrencyChange}>
-      {currencies.map((country) => {
-        return (
-          <option value={country.code} key={country.code}>
-            {country.code}
-          </option>
-        );
-      })}
-    </select>
+  <div id='realCurrencyConverter'>
 
-    <select name="countryPicker2" id="countryPicker2" value={outputCurrency} onChange={handleCurrencyChange2}>
-      {currencies.map((country) => {
-        return (
-          <option value={country.code} key={country.code}>
-            {country.code}
-          </option>
-        );
-      })}
-    </select>
+    <div id="realCurrency1">
+      <select className='currency' name="countryPicker" id="countryPicker" value={inputCurrency} onChange={handleCurrencyChange}>
+        {currencies.map((country) => {
+          return (
+            <option value={country.code} key={country.code}>
+              {country.code}
+            </option>
+          );
+        })}
+      </select>
+      <input type="text" value={multiplier} onChange={(e) => setMultiplier(parseFloat(e.target.value))} />
+    </div>
+
+    <div id="realCurrency2">
+      <select className='currency' name="countryPicker2" id="countryPicker2" value={outputCurrency} onChange={handleCurrencyChange2}>
+        {currencies.map((country) => {
+          return (
+            <option value={country.code} key={country.code}>
+              {country.code}
+            </option>
+          );
+        })}
+      </select>
+      <input type="text" readOnly value={secondValue}></input>
+    </div>
   </div>
 )
 }

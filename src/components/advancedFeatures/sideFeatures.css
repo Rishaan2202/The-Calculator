@@ -1,4 +1,4 @@
-.sideFeatureDiv{
+#sideFeatureDiv{
     background: var(--deep-teal);
     font-family: Public Sans, sans-serif;
     width: 400px;

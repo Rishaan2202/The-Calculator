@@ -1,0 +1,62 @@
+.currency{
+    display: flex;
+}
+
+#realCurrencyConverter{
+    background-color: var(--dark-slate-grey);
+    width: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+}
+
+#realCurrency1{
+    background-color: var(--deep-teal);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#realCurrency2{
+    background-color: var(--deep-teal);
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#countryPicker1{
+    background-color: var(--muted-teal);
+    width: fit-content;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#countryPicker2{
+    background-color: var(--muted-teal);
+    width: fit-content;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+input{
+    background-color: var(--charcoal-blue);
+    width: 120px;
+    border: none;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+}

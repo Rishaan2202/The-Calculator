@@ -1,6 +1,5 @@
 import React from 'react'
 import './sideFeatures.css'
-import Countries from './countries.jsx'
 
 const SideFeature = () => {
 
@@ -19,7 +18,6 @@ const SideFeature = () => {
             <button id="currencyConverter5" className='feature' onClick={showCurrencyConverter}>Currency Converter</button>
             <button id="currencyConverter6" className='feature' onClick={showCurrencyConverter}>Currency Converter</button>
             <button id="currencyConverter7" className='feature' onClick={showCurrencyConverter}>Currency Converter</button>
-            <Countries />
         </div>
 
     )

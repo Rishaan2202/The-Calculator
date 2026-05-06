@@ -24,6 +24,8 @@ function App() {
         setA("");
       } else if (event.key === '.') {
         setA(a + ".");
+      } else if (event.key === 'Alt' || event.key === 'Control') {
+        setA(a + "");
       } else{
         setA(a + event.key);
       }
@@ -85,6 +87,7 @@ function App() {
       </div>
 
       <SideFeature id="sideFeatureDiv" />
+      <Countries/>
     </div>
   )
 }
