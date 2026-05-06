@@ -1,11 +1,12 @@
 import React from 'react'
 import './sideFeatures.css'
+import './countries.jsx'
 
 const SideFeature = () => {
 
     const showCurrencyConverter = () => {
-        const currencyConverter = document.getElementById("currencyConverter");
-        currencyConverter.style.display = "none";
+        const currencyConverter = document.getElementById("realCurrencyConverter");
+        currencyConverter.style.opacity = "1";
     }
 
     return (
