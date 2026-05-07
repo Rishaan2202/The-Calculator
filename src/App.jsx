@@ -7,6 +7,7 @@ import NumButton2 from './components/numbutton/numButton2.jsx';
 import SideFeature from './components/advancedFeatures/sideFeatures.jsx';
 import Countries from './components/advancedFeatures/countries.jsx';
 import Draggable, {DraggableCore} from 'react-draggable';
+import Weather from './components/advancedFeatures/weather.jsx';
 
 function App() {
 
@@ -91,6 +92,7 @@ function App() {
         </div>
 
         <Countries />
+        <Weather />
     </div>
   )
 }
