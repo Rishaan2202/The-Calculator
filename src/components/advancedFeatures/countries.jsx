@@ -215,38 +215,50 @@ const Countries = () => {
     document.getElementById('convertButton').style.animation = "rotate 0.5s ease-in-out";
   };
 
+  const handleBack = () => {
+    document.getElementById('converterWithDiv').style.opacity = '0';
+  };
+
   return (
-    <div id='realCurrencyConverter' hidden>
+    <div id='converterWithDiv'>
 
-      <div id="realCurrency1">
-        <select className='currency' name="countryPicker1" id="countryPicker1" value={inputCurrency} onChange={handleCurrencyChange}>
-          {currencies.map((country) => {
-            return (
-              <option value={country.code} key={country.code}>
-                {country.code}
-              </option>
-            );
-          })}
-        </select>
-        <input type="text" value={multiplier} onChange={(e) => setMultiplier(parseFloat(e.target.value))} />
+      <div id='headings'>
+        <h1 id='currencyHeading'>Currency Converter</h1>
+        <img id='backBtn' src='\src\assets\cross.svg' alt='back' onClick={handleBack}></img>
       </div>
 
-      <div id="realCurrency2">
-        <select className='currency' name="countryPicker2" id="countryPicker2" value={outputCurrency} onChange={handleCurrencyChange2}>
-          {currencies.map((country) => {
-            return (
-              <option value={country.code} key={country.code}>
-                {country.code}
-              </option>
-            );
-          })}
-        </select>
-        <input type="text" id='output' readOnly value=""></input>
-      </div>
+      <div id='realCurrencyConverter'>
 
-      <button id="convertButton" onClick={handleConvert}>
-        <img id='convertImg' src="src/assets/exchange.svg" alt="Convert" />
-      </button>
+        <div id="realCurrency1">
+          <select className='currency' name="countryPicker1" id="countryPicker1" value={inputCurrency} onChange={handleCurrencyChange}>
+            {currencies.map((country) => {
+              return (
+                <option value={country.code} key={country.code}>
+                  {country.code}
+                </option>
+              );
+            })}
+          </select>
+          <input type="text" value={multiplier} onChange={(e) => setMultiplier(parseFloat(e.target.value))} />
+        </div>
+
+        <div id="realCurrency2">
+          <select className='currency' name="countryPicker2" id="countryPicker2" value={outputCurrency} onChange={handleCurrencyChange2}>
+            {currencies.map((country) => {
+              return (
+                <option value={country.code} key={country.code}>
+                  {country.code}
+                </option>
+              );
+            })}
+          </select>
+          <input type="text" id='output' readOnly value=""></input>
+        </div>
+
+        <button id="convertButton" onClick={handleConvert}>
+          <img id='convertImg' src="src/assets/exchange.svg" alt="Convert" />
+        </button>
+      </div>
     </div>
   )
 }
