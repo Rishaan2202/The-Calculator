@@ -1,0 +1,24 @@
+#weatherBox{
+    background-color: var(--dark-slate-grey);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 3;
+    position: absolute;
+    top: 10px;
+    left: 450px;
+}
+
+#weatherTitle{
+    color: var(--muted-teal);
+    font-family: Public Sans, sans-serif;
+}
+
+#weatherContent{
+    margin: 5px;
+}
+
+#weatherHeading{
+    display: flex;
+    justify-content: space-between;
+}

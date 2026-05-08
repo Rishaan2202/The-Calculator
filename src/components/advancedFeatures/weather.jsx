@@ -17,9 +17,9 @@ const Weather = () => {
     async function goodWeather() {
 
         const url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=relative_humidity_2m`;
-        
+
         try {
-            
+
             const response = await fetch(url);
             const weatherData = await response.json();
             setData(weatherData);
@@ -36,16 +36,24 @@ const Weather = () => {
     }
 
     useEffect(() => {
-      goodWeather();
+        goodWeather();
     }, [latitude, longitude]);
-    
+
+    const handleBack = () => {
+        document.getElementById('weatherBox').style.opacity = '0';
+    };
 
     return (
-        <div>
-            <h1>Weather</h1>
-            <h2>Temperature: {data.current_weather ? data.current_weather.temperature : "Loading..."}</h2>
-            <h2>Humidity: {data.hourly ? data.hourly.relative_humidity_2m[0] : "Loading..."}</h2>
-            <h2>Wind Speed: {data.current_weather ? data.current_weather.windspeed : "Loading..."}</h2>
+        <div id="weatherBox">
+            <div id='weatherHeading'>
+                <h1 id='weatherTitle'>Weather</h1>
+                <img id='backBtn' src='\src\assets\cross.svg' alt='back' onClick={handleBack}></img>
+            </div>
+            <div id="weatherContent">
+                <h2>Temperature: {data.current_weather ? data.current_weather.temperature : "Loading..."}</h2>
+                <h2>Humidity: {data.hourly ? data.hourly.relative_humidity_2m[0] : "Loading..."}</h2>
+                <h2>Wind Speed: {data.current_weather ? data.current_weather.windspeed : "Loading..."}</h2>
+            </div>
         </div>
     )
 }
