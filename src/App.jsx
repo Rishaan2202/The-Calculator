@@ -16,8 +16,6 @@ function App() {
   useEffect(() => {
     const handleKeyPress = (event) => {
 
-      console.log(event.key);
-
       if (event.key === 'Enter') {
         setA(evaluate(a));
       } else if (event.key === 'Backspace') {
@@ -92,7 +90,7 @@ function App() {
         </div>
 
         <Countries />
-        <Weather />
+        <Weather id="weatherBox" />
     </div>
   )
 }

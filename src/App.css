@@ -92,3 +92,8 @@ body{
   scale: 0.95;
   transition: smooth;
 }
+
+#weatherBox{
+    z-index: 3;
+    background-color: var(--deep-teal);
+}
