@@ -1,0 +1,82 @@
+#weightBox{ 
+    background-color: var(--dark-slate-grey);
+    width: fit-content;
+    height: 160px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    position: absolute;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+#inputBox, #outputBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+    background-color: var(--deep-teal);
+    width: fit-content;
+    padding: 10px;
+    border-radius: 15px;
+    align-items: center;
+    position: relative;
+    top: 40px;
+}
+
+#unitsSelector, #convertedUnitsSelector{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: fit-content;
+    background-color: var(--muted-teal);
+    z-index: 1;
+}
+
+#inputOutput{
+    display: flex;
+    gap: 60px;
+    padding: 10px;
+    margin: 10px;
+}
+
+#convertBtn{
+    background-color: var(--muted-teal);
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    left: 192px;
+    top: 85px;
+}
+
+#convertBtn:hover{
+    background-color: var(--deep-teal);
+    scale: 1.05;
+    transition: all 0.2s ease-in-out;
+}
+
+#convertBtn:active{
+    background-color: var(--dark-slate-grey);
+    scale: 0.95;
+    transition: all 0.1s ease-in-out;
+}
+
+#weightHeading{
+    display: flex;
+    position: absolute;
+    margin: 10px;
+    color: var(--muted-teal);
+}
+
+#weightBackBtn{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 90px
+}
+

@@ -4,7 +4,7 @@ import './countries.jsx'
 
 const SideFeature = () => {
 
-    const handleIn = () => {
+    const handleCurrencyIn = () => {
         const currencyConverter = document.getElementById("converterWithDiv");
         currencyConverter.style.opacity = "1";
     };
@@ -14,11 +14,16 @@ const SideFeature = () => {
         weatherBox.style.opacity = "1";
     };
 
+    const handleWeightIn = () => {
+        const weightBox = document.getElementById("weightBox");
+        weightBox.style.opacity = "1";
+    };
+
     return (
         <div id="sideFeatureDiv">
-            <button id="currencyConverterBtn" className='feature' onClick={handleIn} >Currency Converter</button>
+            <button id="currencyConverterBtn" className='feature' onClick={handleCurrencyIn} >Currency Converter</button>
             <button id="currencyConverter1" className='feature' onClick={handleWeatherIn} >Weather</button>
-            <button id="currencyConverter2" className='feature' >Weight and Mass</button>
+            <button id="currencyConverter2" className='feature' onClick={handleWeightIn} >Weight and Mass</button>
             <button id="currencyConverter3" className='feature' >Distance Converter</button>
             <button id="currencyConverter4" className='feature' >Currency Converter</button>
             <button id="currencyConverter5" className='feature' >Currency Converter</button>

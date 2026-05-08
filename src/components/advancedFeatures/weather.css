@@ -16,6 +16,7 @@
 
 #weatherContent{
     margin: 5px;
+    color: var(--ash-grey);
 }
 
 #weatherHeading{

@@ -8,6 +8,7 @@ import SideFeature from './components/advancedFeatures/sideFeatures.jsx';
 import Countries from './components/advancedFeatures/countries.jsx';
 import Draggable, {DraggableCore} from 'react-draggable';
 import Weather from './components/advancedFeatures/weather.jsx';
+import Weight from './components/advancedFeatures/weight.jsx';
 
 function App() {
 
@@ -90,7 +91,8 @@ function App() {
         </div>
 
         <Countries />
-        <Weather id="weatherBox" />
+        <Weather />
+        <Weight />
     </div>
   )
 }

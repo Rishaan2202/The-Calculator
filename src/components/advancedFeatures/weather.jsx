@@ -50,9 +50,9 @@ const Weather = () => {
                 <img id='backBtn' src='\src\assets\cross.svg' alt='back' onClick={handleBack}></img>
             </div>
             <div id="weatherContent">
-                <h2>Temperature: {data.current_weather ? data.current_weather.temperature : "Loading..."}</h2>
-                <h2>Humidity: {data.hourly ? data.hourly.relative_humidity_2m[0] : "Loading..."}</h2>
-                <h2>Wind Speed: {data.current_weather ? data.current_weather.windspeed : "Loading..."}</h2>
+                <h2>Temperature: {data.current_weather ? data.current_weather.temperature + "°C" : "Loading..."}</h2>
+                <h2>Humidity: {data.hourly ? data.hourly.relative_humidity_2m[0] + "%" : "Loading..."}</h2>
+                <h2>Wind Speed: {data.current_weather ? data.current_weather.windspeed + " km/h" : "Loading..."}</h2>
             </div>
         </div>
     )
