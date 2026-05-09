@@ -9,8 +9,27 @@ import Countries from './components/advancedFeatures/countries.jsx';
 import Draggable, {DraggableCore} from 'react-draggable';
 import Weather from './components/advancedFeatures/weather.jsx';
 import Weight from './components/advancedFeatures/weight.jsx';
+import Length from './components/advancedFeatures/length.jsx'
+import Temperature from './components/advancedFeatures/temperature.jsx';
+import Energy from './components/advancedFeatures/energy.jsx';
 
 function App() {
+
+  useEffect(() => {
+    const weatherBox = document.getElementById("weatherBox");
+    weatherBox.style.opacity = "0";
+    const currencyConverter = document.getElementById("converterWithDiv");
+    currencyConverter.style.opacity = "0";
+    const weightBox = document.getElementById("weightBox");
+    weightBox.style.opacity = "0";
+    const lengthBox = document.getElementById("lengthBox");
+    lengthBox.style.opacity = "0";
+    const temperatureBox = document.getElementById("temperatureBox");
+    temperatureBox.style.opacity = "0";
+    const energyBox = document.getElementById("energyBox");
+    energyBox.style.opacity = "0";
+  }, [])
+  
 
   let [a, setA] = useState("");
 
@@ -35,7 +54,6 @@ function App() {
     }
 
     window.addEventListener('keydown', handleKeyPress);
-
     
   }, [a]);
 
@@ -93,6 +111,9 @@ function App() {
         <Countries />
         <Weather />
         <Weight />
+        <Length />
+        <Temperature />
+        <Energy />
     </div>
   )
 }

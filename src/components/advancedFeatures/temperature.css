@@ -1,4 +1,4 @@
-#weightBox{ 
+#temperatureBox{ 
     background-color: var(--dark-slate-grey);
     width: fit-content;
     height: 160px;
@@ -9,7 +9,7 @@
     z-index: 2;
     align-items: center;
     justify-content: center;
-    top: 205px;
+    top: 390px;
 }
 
 #inputBox, #outputBox{
@@ -67,14 +67,16 @@
     transition: all 0.1s ease-in-out;
 }
 
-#weightHeading{
+#temperatureHeading{
     display: flex;
     position: absolute;
     margin: 10px;
     color: var(--muted-teal);
 }
 
-#weightBackBtn{
+#temperatureBackBtn{
+    position: absolute;
+    left: 260px;
     width: 25px;
     height: 25px;
     cursor: pointer;
